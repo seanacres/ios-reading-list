@@ -79,5 +79,6 @@ class BookController {
         
         books[index].title = title
         books[index].reasonToRead = reasonToRead
+        saveToPersistentStore()
     }
 }
