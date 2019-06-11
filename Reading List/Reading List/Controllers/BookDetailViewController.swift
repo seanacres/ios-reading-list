@@ -27,8 +27,10 @@ class BookDetailViewController: UIViewController {
             let title = bookTitleTextField.text else { return }
         if book == nil {
             bookController.createBook(title: title, reasonToRead: reasonToReadTextView.text)
+            navigationController?.popToRootViewController(animated: true)
         } else if book != nil {
             bookController.updateBookDetails(for: book!, newTitle: title, newReasonToRead: reasonToReadTextView.text)
+            navigationController?.popToRootViewController(animated: true)
         }
     }
     

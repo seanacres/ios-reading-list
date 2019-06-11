@@ -26,6 +26,10 @@ class BookController {
         return books.filter { $0.hasBeenRead == false }
     }
     
+    init() {
+        loadFromPersistentStore()
+    }
+    
     func saveToPersistentStore() {
         guard let url = readingListURL else { return }
         

@@ -15,6 +15,10 @@ class ReadlingListTableViewController: UITableViewController, BookTableViewCellD
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -59,7 +63,7 @@ class ReadlingListTableViewController: UITableViewController, BookTableViewCellD
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
         bookController.updateHasBeenRead(for: bookFor(indexPath: indexPath))
-        tableView.reloadRows(at: [indexPath], with: .fade)
+        tableView.reloadData()
     }
 
     func bookFor(indexPath: IndexPath) -> Book {
