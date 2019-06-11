@@ -13,16 +13,30 @@ class BookDetailViewController: UIViewController {
     @IBOutlet var bookTitleTextField: UITextField!
     @IBOutlet var reasonToReadTextView: UITextView!
     
+    var bookController: BookController?
+    var book: Book?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateViews()
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let bookController = bookController,
+            let title = bookTitleTextField.text else { return }
+        if book == nil {
+            bookController.createBook(title: title, reasonToRead: reasonToReadTextView.text)
+        } else if book != nil {
+            bookController.updateBookDetails(for: book!, newTitle: title, newReasonToRead: reasonToReadTextView.text)
+        }
     }
     
+    func updateViews() {
+        guard let book = book else { return }
+        bookTitleTextField.text = book.title
+        reasonToReadTextView.text = book.reasonToRead
+    }
 
     /*
     // MARK: - Navigation
