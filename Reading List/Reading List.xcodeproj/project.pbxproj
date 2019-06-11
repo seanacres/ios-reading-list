@@ -13,6 +13,9 @@
 		466941732110E22B00E7FF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 466941712110E22B00E7FF73 /* LaunchScreen.storyboard */; };
 		665B565C22B036E7004ED812 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B565B22B036E7004ED812 /* Book.swift */; };
 		665B565E22B03770004ED812 /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B565D22B03770004ED812 /* BookController.swift */; };
+		665B566022B04115004ED812 /* ReadlingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B565F22B04115004ED812 /* ReadlingListTableViewController.swift */; };
+		665B566222B04129004ED812 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B566122B04129004ED812 /* BookTableViewCell.swift */; };
+		665B566422B0429C004ED812 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B566322B0429C004ED812 /* BookDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		466941742110E22B00E7FF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		665B565B22B036E7004ED812 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		665B565D22B03770004ED812 /* BookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
+		665B565F22B04115004ED812 /* ReadlingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadlingListTableViewController.swift; sourceTree = "<group>"; };
+		665B566122B04129004ED812 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		665B566322B0429C004ED812 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		466941672110E22A00E7FF73 /* Reading List */ = {
 			isa = PBXGroup;
 			children = (
-				466941682110E22A00E7FF73 /* AppDelegate.swift */,
+				665B566622B042AC004ED812 /* Models */,
+				665B566722B042B2004ED812 /* Views */,
+				665B566522B042A5004ED812 /* Controllers */,
 				4669416C2110E22B00E7FF73 /* Main.storyboard */,
-				665B565B22B036E7004ED812 /* Book.swift */,
-				665B565D22B03770004ED812 /* BookController.swift */,
+				466941682110E22A00E7FF73 /* AppDelegate.swift */,
 				4669416F2110E22B00E7FF73 /* Assets.xcassets */,
 				466941712110E22B00E7FF73 /* LaunchScreen.storyboard */,
 				466941742110E22B00E7FF73 /* Info.plist */,
 			);
 			path = "Reading List";
+			sourceTree = "<group>";
+		};
+		665B566522B042A5004ED812 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				665B565D22B03770004ED812 /* BookController.swift */,
+				665B565F22B04115004ED812 /* ReadlingListTableViewController.swift */,
+				665B566322B0429C004ED812 /* BookDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		665B566622B042AC004ED812 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				665B565B22B036E7004ED812 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		665B566722B042B2004ED812 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				665B566122B04129004ED812 /* BookTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				466941692110E22A00E7FF73 /* AppDelegate.swift in Sources */,
+				665B566022B04115004ED812 /* ReadlingListTableViewController.swift in Sources */,
+				665B566422B0429C004ED812 /* BookDetailViewController.swift in Sources */,
 				665B565E22B03770004ED812 /* BookController.swift in Sources */,
+				665B566222B04129004ED812 /* BookTableViewCell.swift in Sources */,
 				665B565C22B036E7004ED812 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
