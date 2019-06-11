@@ -10,10 +10,17 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
 
+    @IBOutlet var bookTitleTextField: UITextField!
+    @IBOutlet var reasonToReadTextView: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
     }
     
 

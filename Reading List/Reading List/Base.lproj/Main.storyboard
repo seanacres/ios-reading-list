@@ -83,7 +83,7 @@
         <!--Add a New Book-->
         <scene sceneID="BP8-Kj-wok">
             <objects>
-                <viewController id="RBH-PS-aYT" sceneMemberID="viewController">
+                <viewController id="RBH-PS-aYT" customClass="BookDetailViewController" customModule="Reading_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7G-N9-mV0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,8 +116,16 @@
                         <viewLayoutGuide key="safeArea" id="3fF-sL-Dia"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a New Book" id="FYP-Wj-xad">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="R17-CH-TWE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="R17-CH-TWE">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="RBH-PS-aYT" id="aiQ-3l-mr5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bookTitleTextField" destination="QeH-rx-oVq" id="u4s-Dg-STT"/>
+                        <outlet property="reasonToReadTextView" destination="eIr-8d-64c" id="Xpn-2u-MoB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGK-6D-Ybr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
