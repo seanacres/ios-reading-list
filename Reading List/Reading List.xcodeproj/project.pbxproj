@@ -16,6 +16,7 @@
 		665B566022B04115004ED812 /* ReadlingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B565F22B04115004ED812 /* ReadlingListTableViewController.swift */; };
 		665B566222B04129004ED812 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B566122B04129004ED812 /* BookTableViewCell.swift */; };
 		665B566422B0429C004ED812 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B566322B0429C004ED812 /* BookDetailViewController.swift */; };
+		665B566922B044B8004ED812 /* BookTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B566822B044B8004ED812 /* BookTableViewCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		665B565F22B04115004ED812 /* ReadlingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadlingListTableViewController.swift; sourceTree = "<group>"; };
 		665B566122B04129004ED812 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		665B566322B0429C004ED812 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		665B566822B044B8004ED812 /* BookTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				665B566122B04129004ED812 /* BookTableViewCell.swift */,
+				665B566822B044B8004ED812 /* BookTableViewCellDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				665B566422B0429C004ED812 /* BookDetailViewController.swift in Sources */,
 				665B565E22B03770004ED812 /* BookController.swift in Sources */,
 				665B566222B04129004ED812 /* BookTableViewCell.swift in Sources */,
+				665B566922B044B8004ED812 /* BookTableViewCellDelegate.swift in Sources */,
 				665B565C22B036E7004ED812 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

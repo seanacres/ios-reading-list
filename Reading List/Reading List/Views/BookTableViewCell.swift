@@ -12,6 +12,9 @@ class BookTableViewCell: UITableViewCell {
 
     @IBOutlet var bookTitle: UILabel!
     @IBOutlet var hasBeenReadButton: UIButton!
+    weak var delegate: BookTableViewCellDelegate?
+    
+    var book: Book?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +27,17 @@ class BookTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func hasBeenReadButtonTapped(_ sender: Any) {
+        delegate?.toggleHasBeenRead(for: self)
+    }
+    
+    func updateViews() {
+        guard let book = book else { return }
+        bookTitle.text = book.title
+        if book.hasBeenRead {
+            hasBeenReadButton.isSelected = true
+        } else {
+            hasBeenReadButton.isSelected = false
+        }
     }
     
 }
